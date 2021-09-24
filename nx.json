@@ -1,0 +1,70 @@
+{
+  "npmScope": "wallaby",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "MDE0NWVlMzQtNDhlYy00ZDQ1LTg5NTQtYmE3MGNlMjc3MjAxfHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "assets": {
+      "tags": []
+    },
+    "atoms": {
+      "tags": []
+    },
+    "catalog": {
+      "tags": []
+    },
+    "dashboard": {
+      "tags": []
+    },
+    "dashboard-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "dashboard"
+      ]
+    },
+    "home": {
+      "tags": []
+    },
+    "home-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "home"
+      ]
+    },
+    "layout": {
+      "tags": []
+    },
+    "theme": {
+      "tags": []
+    }
+  }
+}
