@@ -12,7 +12,9 @@
       "parserOptions": {
         "project": ["apps/dashboard/tsconfig(.*)?.json"]
       },
-      "rules": {}
+      "rules": {
+        "@next/next/no-document-import-in-page": 0
+      }
     },
     {
       "files": ["*.ts", "*.tsx"],

@@ -10,17 +10,46 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2019",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "allowJs": true,
+    "checkJs": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "newLine": "lf",
+    "resolveJsonModule": true,
+    "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@wallaby/assets": ["libs/assets/src/index.ts"],
-      "@watheia/atoms": ["libs/atoms/src/index.ts"],
-      "@watheia/catalog": ["libs/catalog/src/index.ts"],
-      "@watheia/layout": ["libs/layout/src/index.ts"],
-      "@watheia/theme": ["libs/theme/src/index.ts"]
+      "@wallaby/assets": [
+        "libs/assets/src/index.ts"
+      ],
+      "@wallaby/components": [
+        "libs/components/src/index.ts"
+      ],
+      "@watheia/atoms": [
+        "libs/atoms/src/index.ts"
+      ],
+      "@watheia/catalog": [
+        "libs/catalog/src/index.ts"
+      ],
+      "@watheia/layout": [
+        "libs/layout/src/index.ts"
+      ],
+      "@watheia/theme": [
+        "libs/theme/src/index.ts"
+      ],
+      "@watheia/utils": [
+        "libs/utils/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

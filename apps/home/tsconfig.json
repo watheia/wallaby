@@ -12,6 +12,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "next-env.d.ts",
+    "../../libs/atoms/src/lib/pro-tip/ProTip.tsx",
+    "../../libs/atoms/src/lib/link/Link.tsx",
+    "../../libs/atoms/src/lib/copyright/Copyright.tsx",
+    "../../libs/theme/src/index.ts",
+    "../../libs/utils/src/lib/createEmotionCache.ts"
+  ],
   "exclude": ["node_modules"]
 }

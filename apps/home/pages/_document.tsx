@@ -1,8 +1,8 @@
 import * as React from "react"
 import Document, { Html, Head, Main, NextScript } from "next/document"
 import createEmotionServer from "@emotion/server/create-instance"
-import theme from "../src/theme"
-import createEmotionCache from "../src/utils/createEmotionCache"
+import theme from "@watheia/theme"
+import { createEmotionCache } from "@watheia/utils"
 
 export default class MyDocument extends Document {
   render() {
@@ -24,7 +24,6 @@ export default class MyDocument extends Document {
     )
   }
 }
-
 
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // it's compatible with static-site generation (SSG).
@@ -57,7 +56,11 @@ MyDocument.getInitialProps = async (ctx) => {
   // However, be aware that it can have global side effects.
   const cache = createEmotionCache()
   const { extractCriticalToChunks } = createEmotionServer(cache)
+
+  // Create a wrapper for the App to inject caches into when mounted
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function EnhancedApp(App: any) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return function WrappedApp(props: any) {
       return <App emotionCache={cache} {...props} />
     }

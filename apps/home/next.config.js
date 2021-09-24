@@ -16,20 +16,20 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: true
   },
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/corporate",
-        permanent: isProd
-      },
-      {
-        source: "/home",
-        destination: "/corporate",
-        permanent: isProd
-      }
-    ]
-  }
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: "/",
+  //       destination: "/corporate",
+  //       permanent: isProd
+  //     },
+  //     {
+  //       source: "/home",
+  //       destination: "/corporate",
+  //       permanent: isProd
+  //     }
+  //   ]
+  // }
 }
 
 module.exports = withNx(withMdx(nextConfig))
